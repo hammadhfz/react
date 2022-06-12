@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+let name = "Hammad";
+let a = 78;
+function formatName(obj) {
+  return obj.firstName + " " + obj.lastName;
+}
+
+const user = {
+  firstName: "Harper",
+  lastName: "Perez",
+};
+
+const element = <h3>Hello, {formatName(user)}!</h3>;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <div className="container">
+        <h1>UI/Ux</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          praesentium explicabo quasi illum maxime vitae corporis minima
+          ducimus! Saepe, error doloribus eaque natus quae adipisci at
+          consectetur debitis impedit ratione?
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <p>
+          {name}
+          {a} feel the magic in the air
+        </p>
+        <p>{element}</p>
+      </div>
+    </>
   );
 }
 
