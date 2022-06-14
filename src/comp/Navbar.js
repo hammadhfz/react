@@ -4,9 +4,9 @@ import propTypes from 'prop-types'
 export default function Navbar(props) {
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border border-light rounded">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark border border-light rounded sticky-top">
         <div className = "container-fluid">
-          <a className="navbar-brand text-light mx-1 border border-light px-3 rounded p-1" href="/">Logo</a>
+          <a className="navbar-brand text-light mx-1 border border-light px-3 rounded p-1" href="/">{props.logo}</a>
           <button className="navbar-toggler border rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
           </button>
@@ -37,8 +37,11 @@ export default function Navbar(props) {
 }
 
 Navbar.prototype = {
+    logo: propTypes.string.isRequired,
     pagename : propTypes.string.isRequired,
-    about : propTypes.string
+    about : propTypes.string,
+    contact : propTypes.string,
+    gallery : propTypes.string
 }
 
 Navbar.defaultProps = {
