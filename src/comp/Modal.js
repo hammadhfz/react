@@ -3,7 +3,7 @@ import React from 'react'
 export default function Modal() {
   return (
     <>
-    <button type="button" className="btn btn-dark my-1 form-control border" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+    <button type="button" className="btn btn-dark my-3 form-control border border-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
         Happy Scrolling! 
       </button>
 
