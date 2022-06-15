@@ -8,17 +8,17 @@ export default function Slider(props) {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <center>
-                  <img src = {props.img1} className = "d-block w-75 img-fluid" alt = "..."/>
+                  <img src = {props.img1} className = "d-block w-75 img-fluid rounded" alt = "..."/>
                 </center>
               </div >
               <div className="carousel-item ">
                 <center>
-                  <img src = {props.img2} className = "d-block w-75 img-fluid" alt = "..."/>
+                  <img src = {props.img2} className = "d-block w-75 img-fluid rounded" alt = "..."/>
                 </center>
               </div >
               <div className="carousel-item ">
                 <center>
-                  <img src ={props.img3} className = "d-block w-75 img-fluid" alt = "..."/>
+                  <img src ={props.img3} className = "d-block w-75 img-fluid rounded" alt = "..."/>
                 </center>
               </div >
             </div>

@@ -36,21 +36,23 @@ export default function Text(props) {
   return (
     <>
     <div className="container my-3 text-light">
-    <label htmlFor="txt" className="form-label">{props.textLabel}</label>
-    <textarea className="form-control text-light bg-dark border border-primary" id='trrr' onChange={can} rows="3" autoFocus value={tx}></textarea>
-    <button className="btn btn-outline-primary my-3 mx-1 text-light" onClick={vert}>Conversion</button>
-    <button className="btn btn-outline-primary my-3 mx-1 text-light" onClick={copy}>Copy</button>
-    <button className="btn btn-outline-primary my-3 mx-1 text-light" onClick={clear}>Clear</button>
-    <button className="btn btn-outline-primary my-3 mx-1 text-light" onClick={back}>BackSpace</button>
+    <label htmlFor="txt" className={`form-label text-${props.colormode} fw-bold`}>{props.textLabel}</label>
+    <textarea className={`form-control text-${props.colormode} bg-${props.backcolormode} border border-primary`} id='trrr' onChange={can} rows="3" autoFocus value={tx}></textarea>
+    <button className={`btn btn-outline-primary mb-2 mt-2 mx-1 text-${props.colormode} fw-bold`} onClick={vert}>Conversion</button>
+    <button className={`btn btn-outline-primary mb-2 mt-2 mx-1 text-${props.colormode} fw-bold`} onClick={copy}>Copy</button>
+    <button className={`btn btn-outline-primary mb-2 mt-2 mx-1 text-${props.colormode} fw-bold`} onClick={clear}>Clear</button>
+    <button className={`btn btn-outline-primary mb-2 mt-2 mx-1 text-${props.colormode} fw-bold`} onClick={back}>BackSpace</button>
     </div>
-    <div className="container text-light">
-        <h2>Your text Summary</h2>
-        <h3>{tx.length} characters and {wo} words</h3>
+    <div className="container mb-3">
+        <h5 className={`text-${props.colormode}`}>Your text Summary</h5>
+        <h5 className={`text-${props.colormode}`}>{tx.length} characters and {wo} words</h5>
     </div>
     </>
   );
 }
 
 Text.propTypes = {
-    textLabel : propTypes.string
+    textLabel : propTypes.string,
+    colormode: propTypes.string,
+    backcolormode: propTypes.string
 }
