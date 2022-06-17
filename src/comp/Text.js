@@ -6,12 +6,14 @@ export default function Text(props) {
         if (typeof(tx) == "string") {
             var x = tx.toUpperCase();
             set_tx(x);
+            props.setAlarm("Converted to uppercase", "warning");
         }     
     }
 
     let can = (event) => {
         set_tx(event.target.value);
     }
+
     let [tx, set_tx] = useState("");
     // //t = "hello"; // wrong way to change the variable
     // set_tx("hello"); // CORRECT way to change the variable t
@@ -21,6 +23,7 @@ export default function Text(props) {
         // vari.setSelectionRange(0,99999); for mobile
         navigator.clipboard.writeText(vari.value);
         alert(vari.value);
+        props.setAlarm("Text Copied", "secondary");
     }
     let clear = () => {
         set_tx("");
@@ -31,6 +34,7 @@ export default function Text(props) {
         let v = document.getElementById('trrr').value;
         let c = v.substr(0, v.length-1);
         set_tx(c);
+        props.setAlarm("backSpace", "info");
     }
 
   return (
